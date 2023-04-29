@@ -22,6 +22,7 @@ function Punto1() {
                     type='text'
                     onChange={e => setLetter(e.target.value)}
                     maxLength='1'
+                    pattern='^[^0-9]+$'
                 />
             </div>
             <Indicator type='vowel' isVowel={isVowel} />
