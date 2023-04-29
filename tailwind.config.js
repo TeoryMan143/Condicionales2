@@ -18,6 +18,9 @@ export default {
                     950: '#151b13',
                 },
             },
+            fontFamily: {
+                robotos: ['Roboto Slab', 'serif'],
+            },
         },
     },
     plugins: [],
