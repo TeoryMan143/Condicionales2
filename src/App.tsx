@@ -10,16 +10,18 @@ import Header from './interface/Header';
 function App() {
     return (
         <BrowserRouter>
-            <div className='bg-amber-100 min-h-screen flex-col'>
+            <div className='bg-amber-100 min-h-screen flex flex-col'>
                 <Header />
-                <Routes>
-                    <Route path='/' element={<Punto1 />} />
-                    <Route path='/punto2' element={<Punto2 />} />
-                    <Route path='/punto3' element={<Punto3 />} />
-                    <Route path='/punto4' element={<Punto4 />} />
-                    <Route path='/punto5' element={<Punto5 />} />
-                    <Route path='*' element={<NotFound />} />
-                </Routes>
+                <main className='flex flex-grow justify-center items-center'>
+                    <Routes>
+                        <Route path='/' element={<Punto1 />} />
+                        <Route path='/punto2' element={<Punto2 />} />
+                        <Route path='/punto3' element={<Punto3 />} />
+                        <Route path='/punto4' element={<Punto4 />} />
+                        <Route path='/punto5' element={<Punto5 />} />
+                        <Route path='*' element={<NotFound />} />
+                    </Routes>
+                </main>
             </div>
         </BrowserRouter>
     );

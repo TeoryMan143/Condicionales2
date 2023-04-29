@@ -7,8 +7,10 @@ interface Props {
 
 function NavPoint({ children, to }: Props) {
     return (
-        <li className='p-4 bg-amber-400 m-3 rounded-sm text-lg transition-colors font-semibold hover:bg-orange-400 hover:text-amber-100'>
-            <NavLink to={to}>{children}</NavLink>
+        <li className=' bg-amber-400 m-3 rounded-sm text-lg transition-colors font-semibold hover:bg-orange-400 hover:text-amber-100'>
+            <NavLink to={to} className='p-4 block'>
+                {children}
+            </NavLink>
         </li>
     );
 }
