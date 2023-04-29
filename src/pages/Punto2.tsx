@@ -16,7 +16,7 @@ function Punto1() {
 
     return (
         <PointBox>
-            <Title>Titpo de letra</Title>
+            <Title>Tipo de letra</Title>
             <div>
                 <CtmTextField
                     type='text'
