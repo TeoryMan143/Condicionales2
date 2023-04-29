@@ -1,6 +1,8 @@
+import Title from '../components/Title';
 import CtmTextField from '../components/CtmTextField';
 import { useState, useEffect } from 'react';
 import Indicator from '../components/Indicator';
+import PointBox from '../components/PointBox';
 
 function Punto1() {
     const [numLeft, setNumLeft] = useState(0);
@@ -16,14 +18,13 @@ function Punto1() {
     }, [numLeft, numRight]);
 
     return (
-        <div className='border-amber-500 border-4 p-8 rounded-lg'>
-            <h1 className='text-center mb-5 font-robotos text-3xl text-battleship-gray-600'>
-                Comparacion de numeros
-            </h1>
+        <PointBox>
+            <Title>Comparación de numeros</Title>
             <div className='flex flex-col'>
                 <div className='flex items-center gap-4 justify-center'>
                     <div className='flex flex-col items-center'>
                         <CtmTextField
+                            type='number'
                             onChange={e => setNumLeft(parseInt(e.target.value))}
                         />
                     </div>
@@ -36,6 +37,7 @@ function Punto1() {
                     </p>
                     <div className='flex flex-col items-center'>
                         <CtmTextField
+                            type='number'
                             onChange={e =>
                                 setNumRight(parseInt(e.target.value))
                             }
@@ -43,11 +45,11 @@ function Punto1() {
                     </div>
                 </div>
                 <div className='flex justify-center gap-56'>
-                    <Indicator greater={greater} />
-                    <Indicator greater={greater} reverse />
+                    <Indicator type='numCompare' greater={greater} />
+                    <Indicator type='numCompare' greater={greater} reverse />
                 </div>
             </div>
-        </div>
+        </PointBox>
     );
 }
 export default Punto1;

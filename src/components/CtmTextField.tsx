@@ -2,16 +2,17 @@ import { TextField } from '@mui/material';
 
 interface Props {
     onChange: React.ChangeEventHandler<HTMLTextAreaElement | HTMLInputElement>;
+    type: string;
+    maxLength?: string;
 }
 
-function CtmTextField({ onChange }: Props) {
+function CtmTextField({ onChange, type, maxLength }: Props) {
     return (
         <TextField
             color='warning'
-            type='number'
+            type={type}
             inputProps={{
-                inputMode: 'numeric',
-                pattern: '[0-9]*',
+                maxLength,
             }}
             onChange={onChange}
         />
