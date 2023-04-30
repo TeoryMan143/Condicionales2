@@ -1,4 +1,4 @@
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import { Routes, Route, HashRouter } from 'react-router-dom';
 import Punto1 from './pages/Punto1';
 import Punto2 from './pages/Punto2';
 import Punto3 from './pages/Punto3';
@@ -9,12 +9,12 @@ import Header from './interface/Header';
 
 function App() {
     return (
-        <BrowserRouter>
+        <HashRouter>
             <div className='bg-amber-100 min-h-screen flex flex-col'>
                 <Header />
                 <main className='flex flex-grow justify-center items-center'>
                     <Routes>
-                        <Route path='/' element={<Punto1 />} />
+                        <Route path='/punto1' element={<Punto1 />} />
                         <Route path='/punto2' element={<Punto2 />} />
                         <Route path='/punto3' element={<Punto3 />} />
                         <Route path='/punto4' element={<Punto4 />} />
@@ -23,7 +23,7 @@ function App() {
                     </Routes>
                 </main>
             </div>
-        </BrowserRouter>
+        </HashRouter>
     );
 }
 
