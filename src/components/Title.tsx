@@ -4,7 +4,7 @@ interface Props {
 
 function Title({ children }: Props) {
     return (
-        <h1 className='text-center mb-5 font-robotos text-3xl text-battleship-gray-600'>
+        <h1 className='text-center mb-10 font-robotos text-3xl text-battleship-gray-600'>
             {children}
         </h1>
     );
