@@ -29,7 +29,7 @@ function Punto1() {
                 <div className='flex gap-4 items-center'>
                     <CtmTextField
                         type='number'
-                        onChange={e => setNumLeft(parseInt(e.target.value))}
+                        onChange={e => setNumLeft(parseInt(e.target?.value))}
                     />
                     <p className='font-bold text-2xl text-battleship-gray-500'>
                         {operation === 'add' && '+'}
